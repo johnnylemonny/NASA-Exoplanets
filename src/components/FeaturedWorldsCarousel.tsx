@@ -16,6 +16,13 @@ function scrollByAmount(element: HTMLDivElement | null, direction: number) {
   });
 }
 
+const CARD_LAYOUTS = [
+  "md:-translate-y-2 md:min-w-[20.5rem] md:max-w-[22rem] lg:min-w-[22rem]",
+  "md:translate-y-4 md:min-w-[20.5rem] md:max-w-[22rem] lg:min-w-[22rem]",
+  "md:-translate-y-1 md:min-w-[20.5rem] md:max-w-[22rem] lg:min-w-[22rem]",
+  "md:translate-y-6 md:min-w-[20.5rem] md:max-w-[22rem] lg:min-w-[22rem]"
+];
+
 export function FeaturedWorldsCarousel({ items }: Props) {
   const railRef = useRef<HTMLDivElement | null>(null);
   const cards = useMemo(() => items, [items]);
@@ -37,8 +44,11 @@ export function FeaturedWorldsCarousel({ items }: Props) {
       </div>
 
       <div ref={railRef} className="scrollbar-hidden -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 md:mx-0 md:px-0">
-        {cards.map((item) => (
-          <article key={item.id} className="glass-panel group flex min-h-[25rem] min-w-[18rem] snap-start flex-col justify-between overflow-hidden p-6 md:min-w-[24rem] md:flex-1">
+        {cards.map((item, index) => (
+          <article
+            key={item.id}
+            className={`glass-panel group flex min-h-[24rem] min-w-[18rem] snap-start flex-col justify-between overflow-hidden p-6 md:flex-none ${CARD_LAYOUTS[index % CARD_LAYOUTS.length]}`}
+          >
             <div className="space-y-4">
               <div className="flex items-center justify-between gap-3">
                 <span className="eyebrow">{item.eyebrow}</span>

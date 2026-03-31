@@ -105,17 +105,52 @@ const stats = [
       <FeaturedWorldsCarousel client:visible items={dataset.featuredWorlds} />
     </section>
 
-    <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
-      <div class="grid gap-5 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+    <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="grid gap-5 xl:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
         <article class="glass-panel p-6 md:p-7">
           <span class="eyebrow">User journey</span>
           <h2 class="section-title mt-3">Start broad, move into a slice, then zoom into a single world.</h2>
           <p class="section-copy mt-4">The interface keeps the first decision lightweight. Visitors can enter through a preset, run a manual query, or open a featured planet directly into the detail panel. Compare mode stays optional until curiosity turns into analysis.</p>
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4 sm:col-span-2">
+              <span class="data-label">Step 1</span>
+              <h3 class="mt-3 font-display text-2xl text-[var(--foreground)]">Preset discovery</h3>
+              <p class="mt-3 text-sm leading-6 text-[var(--foreground-soft)]">Curated filters narrow the archive instantly without forcing technical knowledge first.</p>
+              <div class="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.2em] text-[var(--muted)]">
+                <span class="action-chip">Hot worlds</span>
+                <span class="action-chip">Nearby systems</span>
+                <span class="action-chip">Fresh finds</span>
+              </div>
+            </div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4">
+              <span class="data-label">Step 2</span>
+              <h3 class="mt-3 font-display text-2xl text-[var(--foreground)]">Focused search</h3>
+              <p class="mt-3 text-sm leading-6 text-[var(--foreground-soft)]">Year, method, facility, host name, distance, and heat can be combined into a clean search state.</p>
+            </div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4">
+              <span class="data-label">Step 3</span>
+              <h3 class="mt-3 font-display text-2xl text-[var(--foreground)]">Fast compare</h3>
+              <p class="mt-3 text-sm leading-6 text-[var(--foreground-soft)]">Pin up to three planets and keep scale, distance, and heat in view without leaving the archive.</p>
+            </div>
+          </div>
         </article>
-        <div class="grid gap-5 md:grid-cols-3">
-          <article class="feature-card"><span class="eyebrow">Step 1</span><h3 class="mt-3 font-display text-2xl text-[var(--foreground)]">Preset discovery</h3><p class="mt-3 text-sm leading-6 text-[var(--foreground-soft)]">Curated filters narrow the archive instantly without forcing technical knowledge first.</p></article>
-          <article class="feature-card"><span class="eyebrow">Step 2</span><h3 class="mt-3 font-display text-2xl text-[var(--foreground)]">Focused search</h3><p class="mt-3 text-sm leading-6 text-[var(--foreground-soft)]">Year, method, facility, host name, distance, and heat can be combined into a clean search state.</p></article>
-          <article class="feature-card"><span class="eyebrow">Step 3</span><h3 class="mt-3 font-display text-2xl text-[var(--foreground)]">Fast compare</h3><p class="mt-3 text-sm leading-6 text-[var(--foreground-soft)]">Pin up to three planets and use the comparison tray to keep scale, distance, and heat in view.</p></article>
+
+        <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
+          <article class="feature-card feature-card-compact sm:col-span-2 xl:col-span-1">
+            <span class="eyebrow">Interaction model</span>
+            <h3 class="mt-3 font-display text-2xl text-[var(--foreground)]">A short, guided path keeps the first pass calm.</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--foreground-soft)]">Visitors can stay in overview mode, then progressively reveal detail only when they need it.</p>
+          </article>
+          <article class="feature-card feature-card-compact">
+            <span class="eyebrow">Preset-first</span>
+            <h3 class="mt-3 font-display text-2xl text-[var(--foreground)]">Curated slices</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--foreground-soft)]">Small entry points reduce the intimidation of a large scientific archive.</p>
+          </article>
+          <article class="feature-card feature-card-compact">
+            <span class="eyebrow">Compare second</span>
+            <h3 class="mt-3 font-display text-2xl text-[var(--foreground)]">Side-by-side reading</h3>
+            <p class="mt-3 text-sm leading-6 text-[var(--foreground-soft)]">Comparison stays optional, helping the interface feel exploratory instead of academic.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -129,8 +164,8 @@ const stats = [
       <ExplorerApp client:load dataUrl={`${assetBase}data/exoplanets-data.json`} />
     </section>
 
-    <section id="guide" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
-      <div class="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <section id="guide" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="grid gap-5 xl:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)]">
         <article class="feature-card min-h-72">
           <span class="eyebrow">How to read the data</span>
           <h2 class="section-title mt-3">Three simple cues keep the archive approachable.</h2>
@@ -140,37 +175,55 @@ const stats = [
             <li><strong class="text-[var(--foreground)]">Size class</strong> translates raw radius estimates into human-readable buckets like terrestrial or gas giant.</li>
           </ul>
         </article>
-        <article class="feature-card min-h-72">
+        <article class="glass-panel p-6 md:p-7">
           <span class="eyebrow">What makes this demo different</span>
           <h2 class="section-title mt-3">Designed for browsing, not just querying.</h2>
           <p class="section-copy mt-4">Many archive demos stop at a form and a table. This one adds a curated front door, cinematic but restrained presentation, a persistent detail context, a real compare mode, and a workflow that keeps the dataset fresh without needing a backend.</p>
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4">
+              <p class="data-label">Curated entry</p>
+              <p class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">Featured worlds give visitors a fast, low-friction on-ramp.</p>
+            </div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4">
+              <p class="data-label">Detail context</p>
+              <p class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">The planet detail panel stays pinned alongside the results.</p>
+            </div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4">
+              <p class="data-label">Static delivery</p>
+              <p class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">GitHub Pages keeps the experience fast and easy to host.</p>
+            </div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4">
+              <p class="data-label">Data refresh</p>
+              <p class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">A scheduled workflow rebuilds the snapshot when NASA updates it.</p>
+            </div>
+          </div>
           <a class="action-button-secondary mt-6 w-fit" href={repoUrl} target="_blank" rel="noreferrer">Open the source on GitHub</a>
         </article>
       </div>
     </section>
 
-    <section id="archive" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
-      <div class="grid gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
+    <section id="archive" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <div class="grid gap-5 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)]">
         <article class="glass-panel p-6 md:p-7">
           <span class="eyebrow">Archive provenance</span>
           <h2 class="section-title mt-3">Built from NASA's Planetary Systems table, then reduced to the current default parameter set.</h2>
           <p class="section-copy mt-4">The build pipeline reads the raw CSV snapshot, keeps the archive's default rows for each current planet, and generates a compact JSON payload for this interface. A separate GitHub Actions workflow can refresh the NASA snapshot and trigger a new deployment when the data changes.</p>
           <dl class="mt-6 grid gap-4 md:grid-cols-2">
-            <div class="feature-card min-h-0"><dt class="data-label">Raw snapshot</dt><dd class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">{dataset.source.csvFile}</dd></div>
-            <div class="feature-card min-h-0"><dt class="data-label">Rows in archive snapshot</dt><dd class="mt-2 font-display text-3xl text-[var(--foreground)]">{formatCompact(dataset.source.archivedRowCount)}</dd></div>
-            <div class="feature-card min-h-0"><dt class="data-label">Rows in live app payload</dt><dd class="mt-2 font-display text-3xl text-[var(--foreground)]">{formatCompact(dataset.source.defaultRowCount)}</dd></div>
-            <div class="feature-card min-h-0"><dt class="data-label">Generated</dt><dd class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">{new Date(dataset.generatedAt).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}</dd></div>
+            <div class="feature-card feature-card-compact"><dt class="data-label">Raw snapshot</dt><dd class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">{dataset.source.csvFile}</dd></div>
+            <div class="feature-card feature-card-compact"><dt class="data-label">Rows in archive snapshot</dt><dd class="mt-2 font-display text-3xl text-[var(--foreground)]">{formatCompact(dataset.source.archivedRowCount)}</dd></div>
+            <div class="feature-card feature-card-compact"><dt class="data-label">Rows in live app payload</dt><dd class="mt-2 font-display text-3xl text-[var(--foreground)]">{formatCompact(dataset.source.defaultRowCount)}</dd></div>
+            <div class="feature-card feature-card-compact"><dt class="data-label">Generated</dt><dd class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">{new Date(dataset.generatedAt).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}</dd></div>
           </dl>
         </article>
         <article class="feature-card min-h-full">
           <span class="eyebrow">Project notes</span>
           <h2 class="section-title mt-3">Static deployment, modern DX, zero backend dependency.</h2>
-          <ul class="mt-5 grid gap-4 text-sm leading-6 text-[var(--foreground-soft)]">
-            <li>Astro powers the shell and route output for GitHub Pages.</li>
-            <li>React islands handle the explorer, compare mode, theme toggle, and featured carousel.</li>
-            <li>CSS motion, hover states, and glass surfaces create the NASA-inspired atmosphere without Framer Motion.</li>
-            <li>GitHub Actions handle CI, Pages deploys, and archive refresh automation on the current branch.</li>
-          </ul>
+          <div class="mt-5 grid gap-3">
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4"><p class="data-label">Astro shell</p><p class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">Astro powers the shell and route output for GitHub Pages.</p></div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4"><p class="data-label">React islands</p><p class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">The explorer, compare mode, theme toggle, and featured carousel stay interactive without bloating the shell.</p></div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4"><p class="data-label">CSS motion</p><p class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">Hover states and subtle transitions create atmosphere without Framer Motion.</p></div>
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/6 p-4"><p class="data-label">GitHub Actions</p><p class="mt-2 text-sm leading-6 text-[var(--foreground-soft)]">CI, Pages deploys, and archive refresh automation run on the current branch.</p></div>
+          </div>
         </article>
       </div>
     </section>
@@ -186,3 +239,4 @@ const stats = [
     </div>
   </footer>
 </MainLayout>
+

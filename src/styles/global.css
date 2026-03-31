@@ -129,12 +129,20 @@ body {
 }
 
 .feature-card {
-  min-height: 15rem;
+  min-height: 13rem;
   border: 1px solid var(--border);
   border-radius: 1.75rem;
   background: color-mix(in oklch, var(--surface-strong) 80%, transparent);
-  padding: 1.5rem;
+  padding: 1.35rem;
   box-shadow: 0 24px 60px -48px var(--shadow-color);
+}
+
+.feature-card-compact {
+  min-height: 0;
+}
+
+.feature-card-emphasis {
+  min-height: 17rem;
 }
 
 .eyebrow {
@@ -419,3 +427,8 @@ a {
     scroll-behavior: auto !important;
   }
 }
+
+
+
+
+

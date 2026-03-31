@@ -1,0 +1,16 @@
+{
+  "name": "NASA Exoplanets",
+  "short_name": "Exoplanets",
+  "start_url": "/NASA-Exoplanets/",
+  "display": "standalone",
+  "background_color": "#0b1731",
+  "theme_color": "#7bc0ff",
+  "icons": [
+    {
+      "src": "/NASA-Exoplanets/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

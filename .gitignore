@@ -1,0 +1,12 @@
+node_modules
+dist
+.astro
+.DS_Store
+coverage
+pnpm-debug.log*
+*.log
+.env
+.env.*
+!.env.example
+data/raw/*.tmp
+playwright-report

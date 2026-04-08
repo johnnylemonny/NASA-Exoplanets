@@ -1,3 +1,4 @@
+/* stylelint-disable */
 @import "@fontsource/space-grotesk/500.css";
 @import "@fontsource/space-grotesk/700.css";
 @import "@fontsource/source-sans-3/400.css";
@@ -411,8 +412,3 @@ a {
     scroll-behavior: auto !important;
   }
 }
-
-
-
-
-

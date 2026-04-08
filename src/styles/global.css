@@ -10,22 +10,6 @@
 }
 
 :root {
-  color-scheme: light;
-  --background: oklch(0.97 0.015 240);
-  --background-strong: oklch(0.92 0.025 238);
-  --surface: color-mix(in oklch, oklch(0.99 0.01 240) 80%, white);
-  --surface-strong: color-mix(in oklch, oklch(0.94 0.02 238) 88%, white);
-  --foreground: oklch(0.23 0.035 250);
-  --foreground-soft: color-mix(in oklch, var(--foreground) 74%, transparent);
-  --muted: oklch(0.5 0.03 244);
-  --border: color-mix(in oklch, var(--foreground) 12%, transparent);
-  --accent: oklch(0.64 0.12 225);
-  --accent-2: oklch(0.73 0.12 35);
-  --accent-3: oklch(0.7 0.09 185);
-  --shadow-color: rgba(18, 38, 71, 0.15);
-}
-
-:root[data-theme="dark"] {
   color-scheme: dark;
   --background: oklch(0.17 0.02 248);
   --background-strong: oklch(0.2 0.03 248);

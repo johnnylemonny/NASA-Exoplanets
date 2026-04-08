@@ -1,7 +1,6 @@
 ---
 import { ExplorerApp } from "@/components/ExplorerApp";
 import { FeaturedWorldsCarousel } from "@/components/FeaturedWorldsCarousel";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import MainLayout from "@/layouts/MainLayout.astro";
 import summaryData from "@/generated/exoplanets-summary.json";
 import { formatCompact, formatNumber } from "@/lib/explorer";
@@ -39,7 +38,6 @@ const stats = [
 
       <div class="flex items-center gap-3">
         <a class="action-button-secondary hidden sm:flex" href={repoUrl} target="_blank" rel="noreferrer">GitHub repo</a>
-        <ThemeToggle client:load />
       </div>
     </div>
   </header>

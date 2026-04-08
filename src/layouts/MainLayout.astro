@@ -11,7 +11,7 @@ const assetBase = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_
 ---
 
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,17 +21,6 @@ const assetBase = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_
     <link rel="icon" type="image/svg+xml" href={`${assetBase}favicon.svg`} />
     <link rel="alternate icon" href={`${assetBase}favicon.svg`} />
     <link rel="manifest" href={`${assetBase}site.webmanifest`} />
-    <script is:inline>
-      (() => {
-        const storageKey = "nasa-exoplanets-theme";
-        const root = document.documentElement;
-        const stored = window.localStorage.getItem(storageKey);
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const mode = stored === "light" || stored === "dark" ? stored : prefersDark ? "dark" : "light";
-        root.dataset.theme = mode;
-        root.style.colorScheme = mode;
-      })();
-    </script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>

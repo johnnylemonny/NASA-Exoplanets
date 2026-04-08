@@ -163,7 +163,8 @@ function getFeaturedWorlds(planets) {
 
 async function main() {
   const csvContent = await fs.readFile(rawCsvPath, "utf8");
-  const parsed = Papa.parse(csvContent, { header: true, skipEmptyLines: true, comments: "#" });
+  const cleanedCsv = csvContent.split(/\r?\n/).filter(line => line.trim() !== "" && !line.startsWith("#")).join("\n");
+  const parsed = Papa.parse(cleanedCsv, { header: true, skipEmptyLines: true });
 
   if (parsed.errors.length > 0) {
     throw new Error(`CSV parse failed: ${parsed.errors[0]?.message ?? "Unknown error"}`);

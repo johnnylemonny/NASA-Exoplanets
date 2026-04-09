@@ -13,10 +13,10 @@ NASA Exoplanets is a static Astro + React demo that turns NASA's Planetary Syste
 
 ## Stack
 
-- Astro 5
-- React 19 islands
+- Astro
+- React islands
 - TypeScript
-- Tailwind CSS 4 utilities plus custom CSS tokens
+- Tailwind CSS utilities plus custom CSS tokens
 - Lucide icons
 - NASA Exoplanet Archive CSV data via the `PS` table
 

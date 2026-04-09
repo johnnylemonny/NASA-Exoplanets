@@ -1,13 +1,12 @@
 # NASA Exoplanets
 
-NASA Exoplanets is a static Astro + React demo that turns NASA's Planetary Systems archive into a faster, more welcoming browsing experience. It combines a cinematic NASA-inspired interface with a practical explorer for filtering, sorting, and comparing confirmed exoplanets.
+NASA Exoplanets is a static Astro + React demo that turns NASA's Planetary Systems archive into a faster, more welcoming browsing experience. It combines a cinematic NASA-inspired interface with a practical explorer for filtering, sorting, and comparing confirmed exoplanets. Inspired by the advanced project idea from [App Ideas](https://github.com/florinpop17/app-ideas)
 
 ## Highlights
 
 - Single-page experience with featured worlds, preset filters, and a full explorer
 - Build-time NASA data pipeline that keeps runtime fast on GitHub Pages
-- React islands for the explorer, compare mode, featured slider, and theme toggle
-- Manual light/dark mode toggle with system-preference detection and persistence
+- React islands for the explorer, compare mode, featured slider
 - GitHub Actions for CI, GitHub Pages deploys, and dataset refresh automation
 - Open-source friendly structure with generated archive metadata committed to the repo
 

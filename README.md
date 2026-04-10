@@ -1,11 +1,8 @@
-<div align="center">
+# 🌌 ExoVault
 
-<img src="public/favicon.svg" alt="ExoVault Logo" width="80" />
+### The Premium NASA Exoplanet Archive Explorer
 
 ![ExoVault Banner](public/banner.png)
-
-# 🌌 ExoVault
-### The Premium NASA Exoplanet Archive Explorer
 
 [![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org)
@@ -16,65 +13,68 @@
 
 [View Demo](https://johnnylemonny.github.io/ExoVault/) • [Documentation](#-getting-started) • [NASA Archive](https://exoplanetarchive.ipac.caltech.edu/)
 
-</div>
-
 ---
-
-## ✨ Features
-
-- **Atmospheric Discovery**: A "preset-first" approach that makes the archive approachable through curated featured worlds and meaningful entry points.
-- **Side-by-Side Comparison**: Powerful analysis tools to compare confirmed planets across all major astronomical metrics.
-- **Production-Ready Pipeline**: A custom build-time processing engine that normalizes NASA's raw CSV data into compact, ultra-fast JSON payloads.
-- **Glassmorphic UI**: A dark-mode first design system featuring smooth motion, high contrast, and accessible landmarks.
-- **Zero-Backend Stack**: Designed for high-traffic scalability using Astro's static generation and GitHub Pages.
-
-## 🛠 Tech Stack
-
-- **Framework**: [Astro 6](https://astro.build/) (Static Site Generation)
-- **Runtime**: [React 19](https://react.dev/) (Interactive Metadata Islands)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) + Custom Design Tokens
-- **Data Engineering**: Node.js & PapaParse for NASA Tap results
-- **Automation**: GitHub Actions for CI/CD and Daily Data Refresh
 
 ## 🚀 Getting Started
 
-### 1. Repository Setup
-```bash
-git clone https://github.com/johnnylemonny/ExoVault.git
-cd ExoVault
-pnpm install
-```
+### Development
 
-### 2. Data Synchronization
-ExoVault requires local processing of the NASA archive.
-```bash
-# Fetch latest snapshot from NASA
-pnpm run data:refresh
+ExoVault is built with **Astro 6** and **React 19**. It uses a custom data pipeline to process NASA's raw CSV data into optimized JSON payloads.
 
-# Build optimized JSON data structures
-pnpm run data:build
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/johnnylemonny/ExoVault.git
+   ```
+2. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
+3. **Build the data cache**:
+   ```bash
+   pnpm run data:build
+   ```
+4. **Start the local server**:
+   ```bash
+   pnpm run dev
+   ```
 
-### 3. Development
-```bash
-pnpm run dev
-```
+---
 
-## 🗳 Data Provenance
+## 🛠️ Tech Stack
 
-All data is sourced from the **NASA Exoplanet Archive**. 
-- **Source**: `Planetary Systems (PS)` table (Confirmed Planets).
-- **Disclaimer**: This is an independent open-source project and is not affiliated with or endorsed by NASA.
+- **Core**: Astro 6 (Static Site Generation)
+- **UI**: React 19 (Islands Architecture)
+- **Styling**: Tailwind CSS 4 (Modern utility-first CSS)
+- **Language**: TypeScript (Type-safe codebase)
+- **Data**: Node.js pipeline with PapaParse for NASA CSV ingestion
 
-## 🤖 Automated Workflows
+---
+
+## 🔭 Key Features
+
+- **Cinematic Discovery**: An interface designed for exploration, not just querying.
+- **Islands Architecture**: Zero-latency navigation with interactive React components only where needed.
+- **Compare Mode**: Side-by-side analysis of up to three exoplanetary systems.
+- **Glassmorphic UI**: High-end aesthetic with native-feeling transitions and backdrop-blur effects.
+- **Automated Refresh**: A custom pipeline that keeps the archive in sync with NASA's latest discoveries.
+
+---
+
+## 🛸 Automations
 
 - **CI/CD**: Full build verification on every commit.
 - **Health Check**: Automated linting and type-safety validation.
+- **Live Sync**: Weekly scheduled data refresh that pulls the latest NASA discoveries and redeploys the site.
+
+---
+
 ## 🤝 Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 Please see our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+---
 
 ## ⚖️ License
 
@@ -82,6 +82,6 @@ MIT License. Check the `LICENSE` file for full details.
 
 ---
 
-<div align="center">
-Crafted with scientific curiosity by [johnnylemonny](https://github.com/johnnylemonny)
-</div>
+<p align="center">
+  Crafted with scientific curiosity by <a href="https://github.com/johnnylemonny">johnnylemonny</a>
+</p>

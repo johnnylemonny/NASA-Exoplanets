@@ -7,6 +7,7 @@ First off, thank you for considering contributing to **ExoVault**! Projects like
 ## 🛰️ How Can I Contribute?
 
 ### Reporting Bugs
+
 If you find a bug, please [open an issue](https://github.com/johnnylemonny/ExoVault/issues). Be sure to include:
 - A clear, descriptive title.
 - Steps to reproduce the issue.
@@ -14,11 +15,13 @@ If you find a bug, please [open an issue](https://github.com/johnnylemonny/ExoVa
 - Screenshots if applicable.
 
 ### Suggesting Improvements
+
 Have an idea to make the explorer even more atmospheric? Open an issue and label it as an `enhancement`. We love ideas that improve data visualization or accessibility!
 
 ### Pull Requests
+
 1. **Fork** the repository and create your branch from `main`.
-2. **Setup** the project locally (see the [Getting Started](#-development-setup) section below).
+2. **Setup** the project locally (see the [Development Setup](#development-setup) section below).
 3. **Commit** your changes using descriptive messages.
 4. **Link** your PR to any related issues.
 5. **Verify** your changes by running `pnpm lint` and `pnpm build`.
@@ -84,4 +87,4 @@ If you are modifying the data scripts (`scripts/`):
 
 Thank you for helping us make the universe a little more accessible!
 
-— [johnnylemonny](https://github.com/johnnylemonny)
+- [johnnylemonny](https://github.com/johnnylemonny)

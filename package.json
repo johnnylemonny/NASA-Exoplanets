@@ -40,5 +40,13 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.58.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnylemonny/ExoVault.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johnnylemonny/ExoVault/issues"
+  },
+  "homepage": "https://johnnylemonny.github.io/ExoVault/"
 }

@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: "https://johnnylemonny.github.io",
-  base: "/NASA-Exoplanets",
+  base: "/ExoVault",
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()]

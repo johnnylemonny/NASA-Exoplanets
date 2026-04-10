@@ -1,16 +1,15 @@
 {
-  "name": "NASA Exoplanets",
-  "short_name": "Exoplanets",
-  "start_url": "/NASA-Exoplanets/",
-  "display": "standalone",
-  "background_color": "#0b1731",
-  "theme_color": "#7bc0ff",
+  "name": "ExoVault",
+  "short_name": "ExoVault",
   "icons": [
     {
-      "src": "/NASA-Exoplanets/favicon.svg",
-      "sizes": "64x64",
+      "src": "favicon.svg",
+      "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any"
+      "purpose": "maskable any"
     }
-  ]
+  ],
+  "theme_color": "#3B82F6",
+  "background_color": "#000000",
+  "display": "standalone"
 }

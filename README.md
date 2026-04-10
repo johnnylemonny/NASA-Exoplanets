@@ -1,122 +1,83 @@
-# NASA Exoplanets
+<div align="center">
 
-NASA Exoplanets is a static Astro + React demo that turns NASA's Planetary Systems archive into a faster, more welcoming browsing experience. It combines a cinematic NASA-inspired interface with a practical explorer for filtering, sorting, and comparing confirmed exoplanets. Inspired by the advanced project idea from [App Ideas](https://github.com/florinpop17/app-ideas)
+<img src="public/favicon.svg" alt="ExoVault Logo" width="80" />
 
-## Highlights
+![ExoVault Banner](public/banner.png)
 
-- Single-page experience with featured worlds, preset filters, and a full explorer
-- Build-time NASA data pipeline that keeps runtime fast on GitHub Pages
-- React islands for the explorer, compare mode, featured slider
-- GitHub Actions for CI, GitHub Pages deploys, and dataset refresh automation
-- Open-source friendly structure with generated archive metadata committed to the repo
+# 🌌 ExoVault
+### The Premium NASA Exoplanet Archive Explorer
 
-## Stack
+[![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
-- Astro
-- React islands
-- TypeScript
-- Tailwind CSS utilities plus custom CSS tokens
-- Lucide icons
-- NASA Exoplanet Archive CSV data via the `PS` table
+**ExoVault** is an elegant, high-performance interface for exploring NASA's Planetary Systems archive. Built for discovery and scientific storytelling, it turns raw astronomical data into a cinematic, production-grade experience.
 
-## Local development
+[View Demo](https://johnnylemonny.github.io/ExoVault/) • [Documentation](#-getting-started) • [NASA Archive](https://exoplanetarchive.ipac.caltech.edu/)
 
-### 1. Install dependencies
+</div>
 
+---
+
+## ✨ Features
+
+- **Atmospheric Discovery**: A "preset-first" approach that makes the archive approachable through curated featured worlds and meaningful entry points.
+- **Side-by-Side Comparison**: Powerful analysis tools to compare confirmed planets across all major astronomical metrics.
+- **Production-Ready Pipeline**: A custom build-time processing engine that normalizes NASA's raw CSV data into compact, ultra-fast JSON payloads.
+- **Glassmorphic UI**: A dark-mode first design system featuring smooth motion, high contrast, and accessible landmarks.
+- **Zero-Backend Stack**: Designed for high-traffic scalability using Astro's static generation and GitHub Pages.
+
+## 🛠 Tech Stack
+
+- **Framework**: [Astro 6](https://astro.build/) (Static Site Generation)
+- **Runtime**: [React 19](https://react.dev/) (Interactive Metadata Islands)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) + Custom Design Tokens
+- **Data Engineering**: Node.js & PapaParse for NASA Tap results
+- **Automation**: GitHub Actions for CI/CD and Daily Data Refresh
+
+## 🚀 Getting Started
+
+### 1. Repository Setup
 ```bash
+git clone https://github.com/johnnylemonny/ExoVault.git
+cd ExoVault
 pnpm install
 ```
 
-### 2. Generate the app dataset
-
+### 2. Data Synchronization
+ExoVault requires local processing of the NASA archive.
 ```bash
+# Fetch latest snapshot from NASA
+pnpm run data:refresh
+
+# Build optimized JSON data structures
 pnpm run data:build
 ```
 
-### 3. Start the dev server
-
+### 3. Development
 ```bash
 pnpm run dev
 ```
 
-### 4. Run project checks
+## 🗳 Data Provenance
 
-```bash
-pnpm run lint
-pnpm run typecheck
-pnpm run build
-```
+All data is sourced from the **NASA Exoplanet Archive**. 
+- **Source**: `Planetary Systems (PS)` table (Confirmed Planets).
+- **Disclaimer**: This is an independent open-source project and is not affiliated with or endorsed by NASA.
 
-## Data pipeline
+## 🤖 Automated Workflows
 
-The app reads the raw archive snapshot from:
+- **CI/CD**: Full build verification on every commit.
+- **Health Check**: Automated linting and type-safety validation.
+- **Live Sync**: Weekly scheduled data refresh that pulls the latest NASA discoveries and redeploys the site.
 
-```text
-data/raw/nasa-exoplanets-ps.csv
-```
+## ⚖️ License
 
-`pnpm run data:build` performs the following steps:
+MIT License. Check the `LICENSE` file for full details.
 
-1. Parses NASA's Planetary Systems CSV snapshot.
-2. Keeps only the archive's default rows for the live app experience.
-3. Normalizes the remaining planets into a compact JSON payload.
-4. Generates featured-world picks and filter options for the UI.
-5. Writes a compact summary payload to `src/generated/exoplanets-summary.json` and the full explorer dataset to `public/data/exoplanets-data.json`.
+---
 
-## Scripts
-
-- `pnpm run dev` - start Astro in development mode
-- `pnpm run build` - rebuild generated data and produce the static site
-- `pnpm run preview` - preview the built output locally
-- `pnpm run lint` - run ESLint
-- `pnpm run typecheck` - run `astro check`
-- `pnpm run data:build` - rebuild the generated app dataset from the local CSV snapshot
-- `pnpm run data:refresh` - fetch the latest NASA archive CSV snapshot into `data/raw/`
-
-## GitHub Pages deployment
-
-The project is configured for repository-based GitHub Pages deployment at:
-
-```text
-https://johnnylemonny.github.io/NASA-Exoplanets/
-```
-
-To publish from GitHub:
-
-1. Push the project to the `NASA-Exoplanets` repository.
-2. In repository settings, open **Pages**.
-3. Set **Source** to **GitHub Actions**.
-4. Let the `Deploy to GitHub Pages` workflow publish the current branch.
-
-## Automated workflows
-
-- `CI` runs lint, typecheck, and build on pushes and pull requests.
-- `Deploy to GitHub Pages` publishes the site from the current branch.
-- `Refresh NASA dataset` can run manually or on a schedule, update the CSV snapshot, regenerate the app dataset, and push changes back to the branch when the archive changes.
-
-## Project structure
-
-```text
-.
-|-- .github/workflows/
-|-- data/raw/
-|-- public/
-|-- scripts/
-|-- src/components/
-|-- src/generated/
-|-- src/layouts/
-|-- src/lib/
-|-- src/pages/
-`-- src/styles/
-```
-
-## Data source
-
-- NASA Exoplanet Archive TAP service: `https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+ps&format=csv`
-- Planet overview pages: `https://exoplanetarchive.ipac.caltech.edu/overview/<planet-name>`
-
-NASA and the NASA Exoplanet Archive are the source of the scientific data used by this project. This repository is an independent demo and is not an official NASA product.
-
-## License
-
-Released under the MIT License. See [LICENSE](./LICENSE).
+<div align="center">
+Crafted with scientific curiosity by [johnnylemonny](https://github.com/johnnylemonny)
+</div>

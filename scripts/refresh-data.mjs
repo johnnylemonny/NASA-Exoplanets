@@ -18,7 +18,7 @@ async function main() {
 
   const response = await fetch(csvUrl, {
     headers: {
-      "user-agent": "nasa-exoplanets-demo/1.0"
+      "user-agent": "exovault-demo/1.0"
     }
   });
 

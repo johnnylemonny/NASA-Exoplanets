@@ -1,6 +1,6 @@
 import type { FilterState, PlanetRecord, SortKey, SortState } from "@/lib/types";
 
-export const THEME_STORAGE_KEY = "nasa-exoplanets-theme";
+export const THEME_STORAGE_KEY = "exovault-theme";
 
 export interface ExplorerPreset {
   id: string;

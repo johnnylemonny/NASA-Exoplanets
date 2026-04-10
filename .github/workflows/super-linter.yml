@@ -27,8 +27,22 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
-          VALIDATE_ASTRO: false # Handled by CI workflow
-          VALIDATE_JAVASCRIPT_ES: false # Handled by CI workflow
-          VALIDATE_TYPESCRIPT_ES: false # Handled by CI workflow
-          VALIDATE_JSX: false # Handled by CI workflow
-          VALIDATE_TSX: false # Handled by CI workflow
+          # Essential linters
+          VALIDATE_MARKDOWN: true
+          VALIDATE_JSON: true
+          VALIDATE_YAML: true
+          VALIDATE_GITHUB_ACTIONS: true
+          # Disable overly aggressive / redundant linters
+          VALIDATE_CHECKOV: false
+          VALIDATE_JSCPD: false
+          VALIDATE_NATURAL_LANGUAGE: false
+          # Prettier often conflicts with specific file formatting and requires its own config
+          VALIDATE_MARKDOWN_PRETTIER: false
+          VALIDATE_JSON_PRETTIER: false
+          VALIDATE_YAML_PRETTIER: false
+          # Code logic handled by CI workflow
+          VALIDATE_ASTRO: false
+          VALIDATE_JAVASCRIPT_ES: false
+          VALIDATE_TYPESCRIPT_ES: false
+          VALIDATE_JSX: false
+          VALIDATE_TSX: false

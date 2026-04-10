@@ -70,7 +70,11 @@ All data is sourced from the **NASA Exoplanet Archive**.
 
 - **CI/CD**: Full build verification on every commit.
 - **Health Check**: Automated linting and type-safety validation.
-- **Live Sync**: Weekly scheduled data refresh that pulls the latest NASA discoveries and redeploys the site.
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+Please see our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## ⚖️ License
 
